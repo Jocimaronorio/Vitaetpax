@@ -165,3 +165,141 @@ get_header(); ?>
         
     </ul>
 </div>
+<div class="content clearfix">
+  <?php while ( have_posts() ) : the_post(); ?>
+
+    <?php
+      /* Include the Post-Format-specific template for the content.
+       * If you want to override this in a child theme, then include a file
+       * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+       */
+      the_content();
+    ?>
+
+  <?php endwhile; ?>
+</div>
+
+<div class="posts_home clearfix">
+  <h1>Informativos</h1>  
+  <div class="container">
+    <?php
+      $args = array (
+        'post_type'              => 'post',
+        'posts_per_page'         => '3',
+        'order'                  => 'ASC',
+        'orderby'                => 'date',
+
+      );
+
+      // The Query
+      $inform = new WP_Query( $args );
+
+      // The Loop
+      if ( $inform->have_posts() ) {
+        while ( $inform->have_posts() ) {
+          $inform->the_post();
+          echo "<div class='col-xs-12 col-md-4 a_post'>";
+            ?><a href="<?php the_permalink(); ?>"><?php
+              if ( has_post_thumbnail() ) :
+                echo the_post_thumbnail();
+              endif;
+            ?></a><?php
+            echo "<div class='home_content'> ";
+              echo the_title('<h2>', '</h2>');
+              echo the_excerpt('<p>', '</p>');
+              ?><p class="link"><a href="<?php the_permalink(); ?>">Saiba Mais</a></p><?php
+              echo "</div>";
+          echo "</div>";
+        }
+      } else {
+        echo "<h1 class='error'>Não tem nenhum informativo a ser exibido</h1>";
+      }
+
+      // Restore original Post Data
+      wp_reset_postdata();
+    ?>
+  </div>
+</div>
+
+<div class="gallery_home clearfix">
+  <h1>Galerias</h1>
+  <div class="container">
+    <?php
+    // WP_Query arguments
+      $args = array (
+        'post_type'              => 'galeria',
+        'posts_per_page'         => '8',
+        'order'                  => 'ASC',
+        'orderby'                => 'date',
+      );
+
+      // The Query
+      $galeria = new WP_Query( $args );
+
+      // The Loop
+      if ( $galeria->have_posts() ) {
+        while ( $galeria->have_posts() ) {
+          $galeria->the_post();?>
+          <a href="<?php the_permalink(); ?>" title="">
+          <?php echo "<div class='col-xs-6 col-md-3 pic'>";
+            if ( has_post_thumbnail() ) :
+              echo the_post_thumbnail();
+            endif;
+            echo the_title('<p>', '</p>');
+          echo "</div>";?>
+          </a>
+        <?php  
+        }
+      } else {
+        echo "<h1 class='error'>Não tem nenhum informativo a ser exibido</h1>";
+      }
+
+      // Restore original Post Data
+      wp_reset_postdata();
+    ?>
+  </div>
+</div>
+
+<div class="videos_home clearfix">
+  <h1>Videos</h1>
+  <div class="container">
+    <?php
+    // WP_Query arguments
+      $args = array (
+        'post_type'              => 'videos',
+        'posts_per_page'         => '3',
+        'order'                  => 'ASC',
+        'orderby'                => 'date',
+      );
+
+      // The Query
+      $galeria = new WP_Query( $args );
+
+      // The Loop
+      if ( $galeria->have_posts() ) {
+        while ( $galeria->have_posts() ) {
+          $galeria->the_post();?>
+          <a href="<?php the_permalink(); ?>" title="">
+          <?php echo "<div class='col-xs-6 col-md-4 pic'>";
+            if ( has_post_thumbnail() ) :
+              echo the_post_thumbnail();
+            endif;
+            echo the_title('<p>', '</p>');
+          echo "</div>";?>
+          </a>
+        <?php  
+        }
+      } else {
+        echo "<h1 class='error'>Não tem nenhum video a ser exibido</h1>";
+      }
+
+      // Restore original Post Data
+      wp_reset_postdata();
+    ?>
+  </div>
+</div>
+
+<div class="place clearfix">
+  <h1>Como chegar</h1>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.51410242991!2d-47.866983500000025!3d-21.1717268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bdbe804632d9%3A0xdda76850fd57dffc!2sAv.+Abade+Constantino%2C+174+-+Jardim+Recreio%2C+Ribeir%C3%A3o+Preto+-+SP%2C+14040-290!5e0!3m2!1spt-BR!2sbr!4v1432565987099" width="100%" height="600" frameborder="0" style="border:0"></iframe>
+</div>

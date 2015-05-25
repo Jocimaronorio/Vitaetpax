@@ -7,7 +7,14 @@ body{
 	font-family: arial;
 	font-size: 1.5em;
 }
+h1,h2,h3,h4,h5{
+	font-family: 'museo500';
+}
+p{
+	color: #444444;
+}
 /* Navegation */
+
 nav.desktop{
 	position: relative;
 	padding: 70px 0;
@@ -88,4 +95,123 @@ nav.desktop ul.extramenu li{
 	background: linear-gradient(to bottom,  #ffffff 53%,#efefec 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefec',GradientType=0 ); /* IE6-9 */
 }
-nav.desktop ul.extramenu li a
+
+/* HOME */
+.content{
+	margin-top: 40px;
+	border-bottom: 1px solid #ECECEC;
+}
+.no-padding{
+	padding: 0 !important;
+}
+.right{
+	text-align: right;
+	float: right;
+}
+.content p{
+	margin-top: 60px;
+	padding-left: 50px;
+	line-height:160%;
+}
+.content img{
+	margin-top: 30px;
+	padding-left: 50px;
+}
+.gallery_home{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	background: url("assets/img/green_background.jpg");
+	background-size: cover;
+}
+.gallery_home h1{
+	color: white;
+	font-size: 3em; 
+}
+.gallery_home .pic{
+	margin-top: 10px;
+}
+.gallery_home .pic > img{
+	border: 12px solid white;
+	overflow: hidden;
+}
+.gallery_home .pic > p{
+	color: white;
+	margin-top: 5px;
+}
+.posts_home h1{
+	font-size: 3em;
+	padding: 0 0 30px 0;
+	text-align: center;
+}
+.posts_home{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.posts_home h1{
+	font-size: 3em;
+	color: #466531;
+}
+.posts_home img{
+	width: 100%;
+	height: auto;
+}
+.posts_home .home_content{
+	padding: 15px;
+	border-bottom: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+	border-left: 1px solid #bbbbbb;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.posts_home .home_content:hover{
+	border-bottom: 1px solid #466531;
+	border-right: 1px solid #466531;
+	border-left: 1px solid #466531;
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	transition: all 2s;
+}
+.posts_home .home_content p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.posts_home .home_content h2{
+	margin-top: 10px;
+	color: #466531;
+}
+.posts_home .home_content p.link{
+	text-align: right;
+}
+.posts_home .home_content a{
+	margin-top: 10px;
+	text-decoration: none;
+	font-size: 0.7em;
+	color: #466531;
+	padding: 8px 10px;
+	border: 1px solid #BBBBBB;
+	border-radius: 4px;
+}
+
+.videos_home{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	background: url("assets/img/white_background.jpg");
+	background-size: cover;
+}
+.videos_home h1{
+	color: #466531;
+	font-size: 3em; 
+}
+.videos_home .pic{
+	margin-top: 10px;
+}
+.videos_home .pic > img{
+	overflow: hidden;
+}
+.videos_home .pic > p{
+	color: #466531;
+	margin-top: 5px;
+}
