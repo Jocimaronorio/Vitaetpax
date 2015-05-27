@@ -201,9 +201,11 @@ nav.desktop ul.extramenu li{
 	background: url("assets/img/white_background.jpg");
 	background-size: cover;
 }
-.videos_home h1{
+.videos_home h1,
+.place h1{
 	color: #466531;
 	font-size: 3em; 
+	text-align: center;
 }
 .videos_home .pic{
 	margin-top: 10px;
@@ -214,4 +216,123 @@ nav.desktop ul.extramenu li{
 .videos_home .pic > p{
 	color: #466531;
 	margin-top: 5px;
+}
+/* QUEM SOMOS e outras paginas*/
+h1.entry-title{
+	background-color: #45672B;
+	color: white;
+	padding: 20px 15%;
+	font-size: 2.5em;
+	margin-bottom: 0;
+}
+.about .first img{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+.about .first p{
+	line-height: 170%;
+}
+.about_second{
+	background: url("assets/img/green_background.jpg");
+	background-size: cover;
+	padding: 20px 0;
+}
+.about_second img{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+.about_second p{
+	line-height: 170%;
+	color: white;
+}
+.the_content_div{
+	padding-bottom: 30px;
+	background-color: #EEEEEE; 
+}
+.the_content_div p{
+	margin-top: 50px;
+	line-height: 170%;
+}
+.people{
+	padding-top: 40px;
+}
+
+.fright{
+	float: right;
+}
+.fleft{
+	float: left;
+}
+.nopadding{
+	padding: 0 !important;
+}
+.nomargin{
+	margin: 0 !important; 
+}
+.aligncenter{
+	text-align: center;
+}
+.alignleft{
+	text-align: left;
+}
+.alignright{
+	text-align: right;
+}
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	margin: 0 !important;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	width: 11.11%;
+}
+.gallery-item img{
+	width: 100%;
+	overflow: hidden;
+}
+.gallery img{
+	border: none !important;
+}
+.gallery-caption {
+	display: block;
 }

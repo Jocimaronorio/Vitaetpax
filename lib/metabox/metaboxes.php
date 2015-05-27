@@ -13,7 +13,7 @@
 
 /********************* META BOX DEFINITIONS ***********************/
 
-$prefix = 'cit-';
+$prefix = 'vita-';
 
 global $meta_boxes;
 
@@ -106,21 +106,62 @@ $meta_boxes[] = array(
 
 /* QUEM SOMOS */
 $meta_boxes[] = array(
-    'title'    => 'Quem Somos <style>.rwmb-add-file {display: none}</style>',
+    'title'    => 'Institucional Chamada 1 <style>.rwmb-add-file {display: none}</style>',
     'pages' => array( 'page' ),
     'include'  => array(
-    'template' => array( 'home.php' ),
+    'template' => array( 'institucional-page.php' ),
     ),
-    'id'       => 'pagina-home-quemsomos',
+    'id'       => 'pagina-quemsomos',
     'fields' => array(
+        array(
+            'name' => 'Imagem',
+            'id'   => "{$prefix}quem_somos-img",
+            'type' => 'image',
+            'columns' => 6,
+        ),
         array(
             'name' => 'Quem Somos',
             'id'   => "{$prefix}quem_somos",
             'type' => 'textarea',
+            'columns' => 6,
+        ),
+        array(
+            'name' => 'Background',
+            'id'   => "{$prefix}quem_somos-back",
+            'type' => 'image',
             'columns' => 12,
         ),
     )
 );
+$meta_boxes[] = array(
+    'title'    => 'Institucional Chamada 2 <style>.rwmb-add-file {display: none}</style>',
+    'pages' => array( 'page' ),
+    'include'  => array(
+    'template' => array( 'institucional-page.php' ),
+    ),
+    'id'       => 'pagina-quemsomos-segunda',
+    'fields' => array(
+        array(
+            'name' => 'Imagem',
+            'id'   => "{$prefix}quem_somos-img2",
+            'type' => 'image',
+            'columns' => 6,
+        ),
+        array(
+            'name' => 'Quem Somos',
+            'id'   => "{$prefix}quem_somos2",
+            'type' => 'textarea',
+            'columns' => 6,
+        ),
+        array(
+            'name' => 'Background',
+            'id'   => "{$prefix}quem_somos-back2",
+            'type' => 'image',
+            'columns' => 12,
+        ),
+    )
+);
+
 
 /* Distribuidor / Revendedor 
 $meta_boxes[] = array(
@@ -149,7 +190,7 @@ $meta_boxes[] = array(
 
 
 /* servicoS */
-/* Home - 1o. campo */
+/* Home - 1o. campo 
 
 $meta_boxes[] = array(
     'title'    => 'Serviços para Home <style>.rwmb-add-file {display: none}</style>',
@@ -306,7 +347,8 @@ $meta_boxes[] = array(
         
     )
 );
-
+*/
+/*
 $meta_boxes[] = array(
     'title'    => 'Partners <style>.rwmb-add-file {display: none}</style>',
       'pages' => array( 'page' ),
@@ -323,7 +365,7 @@ $meta_boxes[] = array(
         ),
     )
 );
-
+*/
 /* Onde comprar 
 $meta_boxes[] = array(
     'title'    => 'Onde Comprar <style>.rwmb-add-file {display: none}</style>',

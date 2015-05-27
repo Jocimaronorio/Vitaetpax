@@ -42,15 +42,15 @@
 
 	<nav class="desktop container">
 		<ul class="left">
-			<li><a href="" title="">Quem Somos</a></li>
-			<li><a href="" title="">História</a></li>
-			<li><a href="" title="">Pedagogia</a></li>
+			<li><a <?php if ( is_page ( 'quem-somos' ) || is_singular( 'quem-somos' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/quem-somos' ) ); ?>">Quem somos</a></li>
+			<li><a <?php if ( is_page ( 'historia' ) || is_singular( 'historia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/historia' ) ); ?>">História</a></li>
+			<li><a <?php if ( is_page ( 'pedagogia' ) || is_singular( 'pedagogia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/pedagogia' ) ); ?>">Pedagogia</a></li>
 		</ul>
-		<img class="logo" src="<?=bloginfo('stylesheet_directory')?>/assets/img/logoHome.png" alt="Logo" />
+		<a <?php if ( is_page ( 'home' ) || is_singular( 'home' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?=bloginfo('stylesheet_directory')?>/assets/img/logoHome.png" alt="Logo" /></a>
 		<ul class="right">
-			<li><a href="" title="">Informativos</a></li>
-			<li><a href="" title="">Galerias</a></li>
-			<li><a href="" title="">Fale Conosco</a></li>
+			<li><a <?php if ( is_page ( 'informativos' ) || is_singular( 'informativos' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/informativos' ) ); ?>">Informativos</a></li>
+			<li><a <?php if ( is_page ( 'galerias' ) || is_singular( 'galerias' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/galerias' ) ); ?>">Galerias</a></li>
+			<li><a <?php if ( is_page ( 'fale-conosco' ) || is_singular( 'fale-conosco' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/fale-conosco' ) ); ?>">Fale Conosco</a></li>
 		</ul>
 		<ul class="extramenu">
 			<li><a href="" title=""><img src="<?=bloginfo('stylesheet_directory')?>/assets/img/hat.png" alt=""> Central do Aluno</a></li>
