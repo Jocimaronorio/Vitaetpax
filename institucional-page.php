@@ -20,7 +20,7 @@ get_header();
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 <div class="about clearfix">
-	<div class="col-xs-12 col-md-6 first">
+	<div class="col-xs-12 col-md-6 first left30">
 		<?php
 		foreach ( $image_title as $image ) {
       echo "<img src='{$image['full_url']}'>";
@@ -36,14 +36,14 @@ get_header();
 </div>
 
 <div class="about_second clearfix">
-	<div class="col-xs-12 col-md-6 nopadding">
+	<div class="col-xs-12 col-md-6 left30">
 		<?php
 		foreach ( $image_back2 as $image ) {
       echo "<img class='fleft nopadding' src='{$image['full_url']}'>";
     }?>
 		
 	</div>
-	<div class="col-xs-12 col-md-6">
+	<div class="col-xs-12 col-md-6 right30">
 		<?php
 		foreach ( $image_title2 as $image ) {
       echo "<img src='{$image['full_url']}'>";
