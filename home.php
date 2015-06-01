@@ -251,8 +251,9 @@ get_header(); ?>
           <a href="<?php the_permalink(); ?>" title="">
           <?php echo "<div class='col-xs-6 col-md-4 pic'>";
             if ( has_post_thumbnail() ) :
-              echo the_post_thumbnail();
-            endif;
+              echo the_post_thumbnail();?>
+              <img class="video-link" src="<?=bloginfo('stylesheet_directory')?>/assets/img/video-link.png" />
+            <?php endif;
             echo the_title('<p>', '</p>');
           echo "</div>";?>
           </a>

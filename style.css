@@ -1,3 +1,24 @@
+/*
+Theme Name: vitaetpax
+Theme URI: http://ibsdigital.com
+Author: Pedro Pizzo
+Author URI: http://pl-box.net/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vitaetpax
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+citiloc is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
 *{
 	margin: 0;
 	padding:  0;
@@ -117,26 +138,35 @@ nav.desktop ul.extramenu li{
 	margin-top: 30px;
 	padding-left: 50px;
 }
-.gallery_home{
+.gallery_home,
+.gallery_page{
 	padding-top: 40px;
 	padding-bottom: 40px;
 	text-align: center;
 	background: url("assets/img/green_background.jpg");
 	background-size: cover;
 }
+.gallery_page{
+	background: none;
+}
 .gallery_home h1{
 	color: white;
 	font-size: 3em; 
 }
-.gallery_home .pic{
+.gallery_home .pic,
+.gallery_page .pic{
 	margin-top: 10px;
 }
-.gallery_home .pic > img{
+.gallery_home .pic > img,
+.gallery_page .pic > img{
 	border: 12px solid white;
 	overflow: hidden;
 }
 .gallery_home .pic > p{
 	color: white;
+	margin-top: 5px;
+}
+.gallery_page .piv > p{
 	margin-top: 5px;
 }
 .posts_home h1{
@@ -194,26 +224,45 @@ nav.desktop ul.extramenu li{
 	border-radius: 4px;
 }
 
-.videos_home{
+.videos_home,
+.videos_page{
 	padding-top: 40px;
 	padding-bottom: 40px;
 	text-align: center;
 	background: url("assets/img/white_background.jpg");
 	background-size: cover;
 }
+.videos_page{
+	background: none;
+}
 .videos_home h1,
-.place h1{
+.place h1,
+.videos_page h1,
+.gallery_page h1{
 	color: #466531;
 	font-size: 3em; 
 	text-align: center;
 }
-.videos_home .pic{
+.videos_home .pic,
+.videos_page .pic{
 	margin-top: 10px;
+	position: relative;
 }
-.videos_home .pic > img{
+.videos_home .pic .video-link,
+.videos_page .pic .video-link{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+}
+.videos_home .pic > img
+.videos_page .pic > img{
 	overflow: hidden;
 }
-.videos_home .pic > p{
+.videos_home .pic > p
+.videos_page .pic > p{
 	color: #466531;
 	margin-top: 5px;
 }
@@ -256,7 +305,22 @@ h1.entry-title{
 .people{
 	padding-top: 40px;
 }
-
+footer{
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+footer .logo{
+	margin-top: 16px;
+}
+footer p{
+	color: #646472;
+	font-size: 0.8em;
+	padding-top: 55px;
+}
+footer .ibs{
+	text-align: right;
+	padding-top: 51px;
+}
 .fright{
 	float: right;
 }

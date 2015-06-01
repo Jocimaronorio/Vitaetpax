@@ -46,7 +46,7 @@
 			<li><a <?php if ( is_page ( 'historia' ) || is_singular( 'historia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/historia' ) ); ?>">História</a></li>
 			<li><a <?php if ( is_page ( 'pedagogia' ) || is_singular( 'pedagogia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/pedagogia' ) ); ?>">Pedagogia</a></li>
 		</ul>
-		<a <?php if ( is_page ( 'home' ) || is_singular( 'home' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?=bloginfo('stylesheet_directory')?>/assets/img/logoHome.png" alt="Logo" /></a>
+		<a <?php if ( is_page ( 'home' ) || is_singular( 'home' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?=bloginfo('stylesheet_directory')?>/assets/img/LogoHome.png" alt="Logo" /></a>
 		<ul class="right">
 			<li><a <?php if ( is_page ( 'informativos' ) || is_singular( 'informativos' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/informativos' ) ); ?>">Informativos</a></li>
 			<li><a <?php if ( is_page ( 'galerias' ) || is_singular( 'galerias' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/galerias' ) ); ?>">Galerias</a></li>
