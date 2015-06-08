@@ -19,8 +19,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<div class="fb-page" data-href="https://www.facebook.com/vitaetpax" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/vitaetpax"><a href="https://www.facebook.com/vitaetpax">Colégio Vita et Pax</a></blockquote></div></div>			
 			</div>
-			<div class="ibs col-xs-12 col-sm-12 col-md-1 col-lg-1">
-			</div>
+			<div class="ibs col-xs-12 col-sm-12 col-md-1 col-lg-1">	</div>
 			<div class="ibs col-xs-12 col-sm-12 col-md-1 col-lg-1">
 				<a href="http://www.ibsdigital.com/" target="blank" title=""><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/ibs.png"></a>
 			</div>

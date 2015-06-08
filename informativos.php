@@ -13,42 +13,59 @@ get_header(); ?>
 <div class="posts_home clearfix">
   <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> 
   <div class="container">
+   <div class="posts_home">
     <?php
-      $args = array (
-        'post_type'              => 'post',
-        'posts_per_page'         => '9',
-        'order'                  => 'ASC',
-        'orderby'                => 'date',
-        'pagination'             => true,
-      );
+    // set the "paged" parameter (use 'page' if the query is on a static front page)
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-      // The Query
-      $inform = new WP_Query( $args );
+    // the query
+    $blog = new WP_Query( 'cat=1&paged=' . $paged ); ?>
+    <div class="row">
+    <?php if ( $blog->have_posts() ) : 
+    // the loop for blog
+    while ( $blog->have_posts() ) : $blog->the_post(); 
+      echo "<div class='col-xs-12 a_post'>";
+      ?><a href="<?php the_permalink(); ?>"><?php
+        if ( has_post_thumbnail() ) :
+          echo the_post_thumbnail();
+        endif;
+      ?></a><?php
+      echo "<div class='home_content'> ";
+        echo the_title('<h2>', '</h2>');
+        ?>
+        <img class="clock" src="<?php bloginfo( 'template_url' ); ?>/assets/img/time.png" alt=""><span class="date"><?php the_time("l, F d, Y"); ?> as <?php the_time('G:i'); ?></span>
+        <?
+        echo the_excerpt('<p>', '</p>');
+        ?><p class="link"><a href="<?php the_permalink(); ?>">Saiba Mais</a></p><?php
+        echo "</div>";
+      echo "</div>";
+    endwhile; ?>
+    </div>
+    <hr>
+    <?php
 
-      // The Loop
-      if ( $inform->have_posts() ) {
-        while ( $inform->have_posts() ) {
-          $inform->the_post();
-          echo "<div class='col-xs-12 col-md-4 a_post'>";
-            ?><a href="<?php the_permalink(); ?>"><?php
-              if ( has_post_thumbnail() ) :
-                echo the_post_thumbnail();
-              endif;
-            ?></a><?php
-            echo "<div class='home_content'> ";
-              echo the_title('<h2>', '</h2>');
-              echo the_excerpt('<p>', '</p>');
-              ?><p class="link"><a href="<?php the_permalink(); ?>">Saiba Mais</a></p><?php
-              echo "</div>";
-          echo "</div>";
-        }
-      } else {
-        echo "<h1 class='error'>Não tem nenhum informativo a ser exibido</h1>";
-      }
+    echo "<div class='row pagination'>";
 
-      // Restore original Post Data
-      wp_reset_postdata();
+      // next_posts_link() usage with max_num_pages
+      echo "<div class='col-xs-6 ta-left'>";
+        previous_posts_link( 'Postagens mais recentes' );
+      echo "</div>";
+      echo "<div class='col-xs-6 ta-right'>";
+        next_posts_link( 'Postagens mais antigas', $blog->max_num_pages );
+      echo "</div>";
+
+    echo "</div>";
     ?>
+
+    <?php 
+    // clean up after the query and pagination
+    wp_reset_postdata(); 
+    ?>
+
+    <?php else:  ?>
+    <p><?php _e( 'Desculpe, não foi encontrado nenhum post.' ); ?></p>
+    <?php endif; ?>
+    </div>
   </div>
 </div>
 

@@ -53,8 +53,25 @@
 			<li><a <?php if ( is_page ( 'fale-conosco' ) || is_singular( 'fale-conosco' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/fale-conosco' ) ); ?>">Fale Conosco</a></li>
 		</ul>
 		<ul class="extramenu">
-			<li><a href="" title=""><img src="<?=bloginfo('stylesheet_directory')?>/assets/img/hat.png" alt=""> Central do Aluno</a></li>
-			<li><a href="" title=""><img src="<?=bloginfo('stylesheet_directory')?>/assets/img/guy.png" alt=""> Sala dos Professores</a></li>
+			<li><a href="http://www.primasoft.srv.br/sg_web/default.aspx?escola=3301" target="blank" title=""><img src="<?=bloginfo('stylesheet_directory')?>/assets/img/hat.png" alt=""> Central do Aluno</a></li>
+			<li><a href="http://www.primasoft.srv.br/sg_web/default.aspx?escola=3301" target="blank" title=""><img src="<?=bloginfo('stylesheet_directory')?>/assets/img/guy.png" alt=""> Sala dos Professores</a></li>
 		</ul>
 	</nav>
 	
+	<nav class="mobile container">
+		<a <?php if ( is_page ( 'home' ) || is_singular( 'home' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?=bloginfo('stylesheet_directory')?>/assets/img/LogoFooter.png" alt="Logo" /></a>
+		<li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+	        <ul class="dropdown-menu" role="menu">
+	        	<li><a <?php if ( is_page ( 'home' ) || is_singular( 'home' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+				<li><a <?php if ( is_page ( 'quem-somos' ) || is_singular( 'quem-somos' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/quem-somos' ) ); ?>">Quem somos</a></li>
+				<li><a <?php if ( is_page ( 'historia' ) || is_singular( 'historia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/historia' ) ); ?>">História</a></li>
+				<li><a <?php if ( is_page ( 'pedagogia' ) || is_singular( 'pedagogia' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/pedagogia' ) ); ?>">Pedagogia</a></li>
+				<li><a <?php if ( is_page ( 'informativos' ) || is_singular( 'informativos' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/informativos' ) ); ?>">Informativos</a></li>
+				<li><a <?php if ( is_page ( 'galerias' ) || is_singular( 'galerias' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/galerias' ) ); ?>">Galerias</a></li>
+				<li><a <?php if ( is_page ( 'fale-conosco' ) || is_singular( 'fale-conosco' ) ) { ?> class="ative"<?php } ?> href="<?php echo esc_url( home_url( '/fale-conosco' ) ); ?>">Fale Conosco</a></li>
+				<li><a href="http://www.primasoft.srv.br/sg_web/default.aspx?escola=3301" target="blank" title="">Central do Aluno</a></li>
+				<li><a href="http://www.primasoft.srv.br/sg_web/default.aspx?escola=3301" target="blank" title="">Sala dos Professores</a></li>
+			</ul>
+        </li>
+	</nav>

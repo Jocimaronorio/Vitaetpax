@@ -40,7 +40,8 @@ nav.desktop{
 	position: relative;
 	padding: 70px 0;
 }
-nav.desktop ul{
+nav.desktop ul,
+nav.mobile ul{
 	list-style: none;
 }
 nav.desktop ul.left{
@@ -116,7 +117,20 @@ nav.desktop ul.extramenu li{
 	background: linear-gradient(to bottom,  #ffffff 53%,#efefec 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefec',GradientType=0 ); /* IE6-9 */
 }
-
+nav.mobile{
+	padding: 10px 15px;
+}
+nav.mobile .dropdown,
+nav.mobile .dropdown > a{
+	color: #466531;
+	list-style: none;
+	float: left;
+	margin-top: 7px;
+	font-size: 1.3em;
+}
+nav.mobile .logo{
+	float: right;
+}
 /* HOME */
 .content{
 	margin-top: 40px;
@@ -161,6 +175,8 @@ nav.desktop ul.extramenu li{
 .gallery_page .pic > img{
 	border: 12px solid white;
 	overflow: hidden;
+	width: 100%;
+    height: auto;
 }
 .gallery_home .pic > p{
 	color: white;
@@ -175,15 +191,24 @@ nav.desktop ul.extramenu li{
 	text-align: center;
 }
 .posts_home{
-	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.posts_home img.clock{
+	margin-top: -1px;
+}
+.posts_home span.date{
+	color: #bbb;
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
 .posts_home h1{
 	font-size: 3em;
 	color: #466531;
 }
 .posts_home img{
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 .posts_home .home_content{
@@ -213,6 +238,9 @@ nav.desktop ul.extramenu li{
 }
 .posts_home .home_content p.link{
 	text-align: right;
+}
+.posts_home .a_post{
+	margin-top: 30px;
 }
 .posts_home .home_content a{
 	margin-top: 10px;
@@ -256,10 +284,14 @@ nav.desktop ul.extramenu li{
 	transform: translate(-50%,-50%);
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
+	width: auto !important;
+	height: auto !important;
 }
-.videos_home .pic > img
+.videos_home .pic > img,
 .videos_page .pic > img{
 	overflow: hidden;
+	width: 100%;
+    height: auto;
 }
 .videos_home .pic > p
 .videos_page .pic > p{
@@ -273,6 +305,7 @@ h1.entry-title{
 	padding: 20px 15%;
 	font-size: 2.5em;
 	margin-bottom: 0;
+	text-align: left;
 }
 .about .first img{
 	margin-top: 50px;
@@ -310,12 +343,20 @@ footer{
 	padding-bottom: 30px;
 }
 footer .logo{
+	text-align: center;
 	margin-top: 16px;
 }
+footer .logo img,
+footer .ibs img,
+{
+	width: auto;
+}
 footer p{
+	text-align: center;
 	color: #646472;
 	font-size: 0.8em;
 	padding-top: 55px;
+	padding-bottom: 25px;
 }
 footer .ibs{
 	text-align: right;
@@ -348,6 +389,95 @@ footer .ibs{
 .right30{
 	padding-right: 15%;
 }
+img{
+	max-width: 100%; 
+	width: auto;
+	height: auto;
+}
+/*--------------------------------------------------------------
+## Mobile
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+	nav.desktop{
+		display: none;
+	}
+	nav.mobile{
+		display: block;
+	}
+	footer .ibs{
+		padding-top: 10px;
+	}
+	.left30{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.right30{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	nav.desktop{
+		display: none;
+	}
+	nav.mobile{
+		display: block;
+	}
+	footer .ibs{
+		padding-top: 10px;
+	}
+	.left30{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.right30{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	nav.desktop{
+		display: block;
+	}
+	nav.mobile{
+		display: none;
+	}
+	footer .ibs{
+		padding-top: 51px;
+	}
+	.left30{
+		padding-left: 15%;
+	}
+	.right30{
+		padding-right: 15%;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	nav.desktop{
+		display: block;
+	}
+	nav.mobile{
+		display: none;
+	}
+	footer .ibs{
+		padding-top: 51px;
+	}
+	.left30{
+	padding-left: 15%;
+	}
+	.right30{
+		padding-right: 15%;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
@@ -361,6 +491,7 @@ footer .ibs{
 	vertical-align: top;
 	width: 100%;
 	margin: 0 !important;
+	padding: 10px;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -396,6 +527,7 @@ footer .ibs{
 }
 .gallery-item img{
 	width: 100%;
+	height: auto;
 	overflow: hidden;
 }
 .gallery img{
