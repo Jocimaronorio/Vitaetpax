@@ -35,7 +35,7 @@ get_header();
 	</div>
 </div>
 
-<div class="about_second clearfix">
+<div class="about_second clearfix ">
 	<div class="col-xs-12 col-md-6 left30">
 		<?php
 		foreach ( $image_back2 as $image ) {
@@ -52,7 +52,7 @@ get_header();
 	</div>
 </div>
 
-<div class="the_content_div">
+<div class="the_content_div padding15">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 			/* translators: %s: Name of current post */

@@ -30,7 +30,7 @@ get_header(); ?>
         while ( $galeria->have_posts() ) {
           $galeria->the_post();?>
           <a href="<?php the_permalink(); ?>" title="">
-          <?php echo "<div class='col-xs-6 col-md-3 pic'>";
+          <?php echo "<div class='col-xs-12 col-md-3 pic'>";
             if ( has_post_thumbnail() ) :
               echo the_post_thumbnail();
             endif;
@@ -68,7 +68,7 @@ get_header(); ?>
         while ( $galeria->have_posts() ) {
           $galeria->the_post();?>
           <a href="<?php the_permalink(); ?>" title="">
-          <?php echo "<div class='col-xs-6 col-md-4 pic'>";
+          <?php echo "<div class='col-xs-12 col-md-4 pic'>";
             if ( has_post_thumbnail() ) :
               echo the_post_thumbnail();?>
               <img class="video-link" src="<?=bloginfo('stylesheet_directory')?>/assets/img/video-link.png" />

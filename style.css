@@ -416,6 +416,9 @@ img{
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+	.padding15{
+		padding: 15px;
+	}
 
 }
 
@@ -438,6 +441,9 @@ img{
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+	.padding15{
+		padding: 15px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -457,6 +463,9 @@ img{
 	.right30{
 		padding-right: 15%;
 	}
+	.padding15{
+		padding: inherit;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -475,6 +484,9 @@ img{
 	}
 	.right30{
 		padding-right: 15%;
+	}
+	.padding15{
+		padding: inherit;
 	}
 }
 
